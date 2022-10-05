@@ -1,0 +1,55 @@
+.benefit-item {
+  margin-bottom: 32px;
+  min-height: 142px;
+  background-size: 52px 56px;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  &--speed {
+    background-image: url("../../../img/benefit-speed.svg");
+  }
+
+  &--convenience {
+    background-image: url("../../../img/benefit-convenience.svg");
+  }
+
+  &--energy {
+    background-image: url("../../../img/benefit-energy.svg");
+  }
+
+  &--eco {
+    background-image: url("../../../img/benefit-eco.svg");
+  }
+}
+
+.benefit-item__title {
+  padding-top: 66px;
+  padding-bottom: 10px;
+}
+
+.benefit-item__about {
+  margin: 0;
+  padding: 0 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .benefit-item {
+    width: 339px;
+    min-height: 118px;
+    margin-bottom: 0;
+    background-position: left 4px;
+  }
+
+  .benefit-item__title {
+    font-size: 24px;
+    line-height: 36px;
+    padding-top: 0;
+    padding-left: 72px;
+    text-align: start;
+  }
+
+  .benefit-item__about {
+    text-align: start;
+    padding-left: 72px;
+  }
+}

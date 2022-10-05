@@ -1,0 +1,107 @@
+.control__label {
+  position: relative;
+  display: flex;
+}
+
+.control__input:disabled ~ .control__input-text {
+  color: @base-grey;
+}
+
+// Radio-buttons
+
+.control__input[type="radio"] + .control__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid @base-grey;
+}
+
+.control__input[type="radio"]:disabled + .control__mark {
+  border: 2px solid @disabled-color;
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @base-primary;
+}
+
+.control__input[type="radio"]:checked + .control__mark {
+  border: 2px solid @base-primary;
+}
+
+.control__input[type="radio"] ~ .control__input-text {
+  padding-left: 34px;
+}
+
+// Checkbox-buttons
+
+.control__input[type="checkbox"] + .control__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: @base-grey;
+}
+
+.control__input[type="checkbox"] + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: @base-white;
+  transition: all 0.3s;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  background-color: @base-primary;
+}
+
+.control__input[type="checkbox"]:disabled + .control__mark {
+  background-color: @disabled-color;
+  border: none;
+}
+
+.control__input + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @base-white;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.control__input-text {
+  font-family: @font-family;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: @base-black;
+}
+
+.control__input[type="checkbox"] ~ .control__input-text {
+  padding-left: 52px;
+}
+

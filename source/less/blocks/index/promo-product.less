@@ -1,0 +1,135 @@
+.promo-product {
+  padding: 20px 20px 60px;
+
+  &--dekaf {
+    background-color: @bg-flat-white;
+  }
+
+  &--latte {
+    background-color: @bg-lavender-latte;
+  }
+
+  &--espresso {
+    background-color: @bg-espresso;
+  }
+}
+
+.promo-product__image {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  height: 280px;
+}
+
+.promo-product__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-product__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: @font-family;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  color: @base-black;
+}
+
+.promo-product__text {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.promo-product__old-price {
+  margin-right: 6px;
+  font-family: @font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  text-decoration-line: line-through;
+  color: @base-primary;
+}
+
+.promo-product__price {
+  margin-right: 20px;
+  font-family: @font-family;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: @base-black;
+}
+
+@media (min-width: @tablet-width) {
+  .promo-product {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .promo-product__image-wrapper {
+    order: 2;
+
+    &--dekaf {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 40%, rgba(243, 235, 225, 1) 40%);
+    }
+
+    &--latte {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 40%, rgba(234, 230, 252, 1) 40%);
+    }
+
+    &--espresso {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 40%, rgba(229, 230, 232, 1) 40%);
+    }
+  }
+
+  .promo-product__image {
+    width: 476px;
+    height: 476px;
+  }
+
+  .promo-product__title {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+    letter-spacing: 0.07em;
+  }
+
+  .promo-product__text {
+    width: 608px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .promo-product__description {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo-product {
+    flex-direction: row;
+  }
+
+  .promo-product__image-wrapper {
+    order: -1;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 105px;
+    margin-right: 30px;
+
+    &--dekaf,
+    &--latte,
+    &--espresso {
+      background: none;
+    }
+  }
+
+  .promo--product__image {
+    width: 600px;
+    height: 600px;
+  }
+}

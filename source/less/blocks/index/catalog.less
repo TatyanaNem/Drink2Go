@@ -1,0 +1,38 @@
+.catalog {
+  text-align: center;
+  background-color: @bg-lightest-grey;
+}
+
+.catalog__container {
+  padding: 50px 20px 44px;
+}
+
+.catalog__filter {
+  margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__container {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  .catalog__goods {
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .catalog__title {
+    margin-bottom: 40px;
+  }
+
+  .catalog__inner-wrapper {
+    display: flex;
+  }
+}

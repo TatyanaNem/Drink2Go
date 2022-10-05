@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-family: @font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: @base-primary;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: @primary-lighter;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    background-color: @base-grey;
+  }
+}
